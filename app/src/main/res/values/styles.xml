@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="SkinCompatTextAppearance_titleSelectColor" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/skin_title_select</item>
+    </style>
+
+    <style name="SkinCompatTextAppearance_titleUnSelectColor" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">@color/skin_title_unselect</item>
+    </style>
+
+</resources>

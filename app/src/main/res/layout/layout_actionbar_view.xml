@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@id/appbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+
+    <ImageView
+            android:id="@id/appbarBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/imageView"
+            android:src="@color/app_color_white"/>
+
+    <FrameLayout
+            android:id="@id/toolbarLayoutContent"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom" />
+
+</FrameLayout>
