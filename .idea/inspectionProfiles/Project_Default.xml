@@ -6,7 +6,12 @@
         <header value="### 警示" />
         <header value="***这是斜体加粗的文字***" />
         <header value="**这是加粗的文字**" />
+        <header value="*xincaution*" />
         <header value="*这是倾斜的文字*`" />
+        <header value="- 设置不可获得焦点" />
+        <header value="```" />
+        <header value="android" />
+        <header value="final InputMethodManager imm = (InputMethodManager) mContext.getSystemService(INPUT_METHOD_SERVICE);" />
         <header value="~~这是加删除线的文字~~" />
       </option>
     </inspection_tool>
