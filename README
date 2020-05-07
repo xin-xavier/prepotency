@@ -1,5 +1,48 @@
-### 警示
-**这是加粗的文字**
-*这是倾斜的文字*`
-***这是斜体加粗的文字***
-~~这是加删除线的文字~~
+#### 焦点
+- 设置不可获得焦点
+```    
+editText.setFocusable(false);
+
+```
+- 设置可以获得焦点
+```   
+editText.setFocusable(true);
+editText.setFocusableInTouchMode(true);
+```  
+
+#### 光标
+- 设置光标不可显示
+```    
+editText.setCursorVisible(false);
+
+```
+- 设置光标可以显示(同时显示出来)
+```   
+editText.setCursorVisible(true);
+editText.requestFocus();
+```  
+- 设置光标位置
+```
+editText.setSelection(editText.getText().toString().length());
+```
+
+
+#### 文本选中
+```
+editText.setSelection(0,editText.getText().toString().length());
+```
+
+#### 软件盘
+- 弹出软件盘
+```   
+final InputMethodManager imm = (InputMethodManager) mContext.getSystemService(INPUT_METHOD_SERVICE);
+ imm.showSoftInput(editText,0);
+```  
+
+### 软键盘遮挡edittext
+原因： 设置了沉浸式状态栏 
+
+解决：根布局添加
+```
+android:fitsSystemWindows="true"
+```
