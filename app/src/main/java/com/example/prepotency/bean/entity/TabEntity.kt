@@ -3,18 +3,18 @@ package com.example.prepotency.bean.entity
 import com.flyco.tablayout.listener.CustomTabEntity
 
 class TabEntity : CustomTabEntity {
-    var title: String? = null
+    var title: String = ""
     var selectedIcon = 0
     var unSelectedIcon = 0
 
     constructor() {}
-    constructor(title: String?, selectedIcon: Int, unSelectedIcon: Int) {
+    constructor(title: String, selectedIcon: Int, unSelectedIcon: Int) {
         this.title = title
         this.selectedIcon = selectedIcon
         this.unSelectedIcon = unSelectedIcon
     }
 
-    override fun getTabTitle(): String? {
+    override fun getTabTitle(): String {
         return title
     }
 

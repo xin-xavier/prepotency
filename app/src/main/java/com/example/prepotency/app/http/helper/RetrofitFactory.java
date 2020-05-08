@@ -1,6 +1,6 @@
 package com.example.prepotency.app.http.helper;
 
-import com.example.prepotency.app.http.url.ConstantUrl;
+import com.example.prepotency.app.http.url.DNSConfig;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 import retrofit2.Retrofit;
@@ -11,19 +11,25 @@ class RetrofitFactory {
 
     static Retrofit apiFactory() {
         return gsonFactory()
-                .baseUrl(ConstantUrl.BASE_URL_DEBUG)
+                .baseUrl(DNSConfig.getInstance().getApiUrl())
                 .build();
     }
 
     static Retrofit apiServerFactory() {
         return gsonFactory()
-                .baseUrl(ConstantUrl.BASE_URL_SERVER_DEBUG)
+                .baseUrl(DNSConfig.getInstance().getApiServerUrl())
                 .build();
     }
 
     static Retrofit scalarsApiServerFactory() {
         return scalarsFactory()
-                .baseUrl(ConstantUrl.BASE_URL_SERVER_DEBUG)
+                .baseUrl(DNSConfig.getInstance().getApiServerUrl())
+                .build();
+    }
+
+    static Retrofit liveApiFactory() {
+        return gsonFactory()
+                .baseUrl(DNSConfig.getInstance().getLiveApiUrl())
                 .build();
     }
 

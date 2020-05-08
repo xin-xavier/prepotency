@@ -7,6 +7,7 @@ import android.os.Bundle
 import com.example.prepotency.app.AppManager
 import com.example.prepotency.app.api.ConstantPool
 import com.example.prepotency.app.base.viewstratum.presentation.UIPresentation
+import com.example.prepotency.login.LoginActivity
 import com.example.prepotency.utils.os.OSStatusBarUtil
 import com.jaeger.library.StatusBarUtil
 import kotlin.properties.Delegates
@@ -63,7 +64,7 @@ abstract class SimpleActivty : LifeLinksBaseActivity() ,
     protected fun intent(clazz:Class<*>,isLogin:Boolean){
         //需要登录&&未登录
         if (isLogin && !AppManager.isLogin()) {
-            //startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
         }else{
             startActivity(Intent(this,clazz))
         }
@@ -75,7 +76,7 @@ abstract class SimpleActivty : LifeLinksBaseActivity() ,
     protected fun intent(bundle: Bundle,clazz:Class<*>,isLogin:Boolean){
         //需要登录&&未登录
         if (isLogin && !AppManager.isLogin()) {
-            //startActivity(Intent(this, LoginActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
         }else{
             startActivity(Intent(this, clazz).apply {
                 putExtras(bundle)

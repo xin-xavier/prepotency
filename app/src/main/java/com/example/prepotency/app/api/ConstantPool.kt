@@ -8,23 +8,14 @@ interface ConstantPool {
 
         const val Http_TAG = "OKHttpClient: "
 
-        const val ARG_PARAM_VIEW = "floatingActionButton"
-        const val ARG_PARAM_ID = "pageItem"
-        const val ARG_PARAM_CLASS = "pageClass"
-
-        const val SOCKET_CLIENT_TAG = "WebSocketClient"
-        const val PONG = "PONG"
-        const val PING = "PING"
-        const val SOCKET_BROADCAST_ACTION = "com.example.chatexample.MINGW_IM"
-        const val MESSAGE = "message"
-        const val PUSH_STATUS = "PushStatus"
-
-        const val GRAY_SERVICE_ID = 9501
-        const val SETTING_FOR_RESULTCODE = 100
-
         const val IDENTIFIER_NAME = "status_bar_height"
         const val DEF_TYPE = "dimen"
         const val ANDROID = "android"
+
+
+        const val ARG_PARAM_VIEW = "floatingActionButton"
+        const val ARG_PARAM_ID = "pageItem"
+        const val ARG_PARAM_CLASS = "pageClass"
 
         const val HOME = "首页"
         const val NEWS = "消息"
@@ -32,7 +23,6 @@ interface ConstantPool {
         const val MINE = "我的"
 
         val TABS: Array<String> = arrayOf(HOME, NEWS, SHOPPING_CART, MINE)
-        //val TABS: Array<String> = arrayOf("", "", "", "")
         val ICON_SELECT_IDS: Array<Int> = arrayOf(
             R.mipmap.tab_home_select,
             R.mipmap.tab_news_select,
@@ -45,6 +35,25 @@ interface ConstantPool {
             R.mipmap.tab_shopping_unselect,
             R.mipmap.tab_mine_unselect
         )
+
+        const val SOCKET_CLIENT_TAG = "WebSocketClient"
+        const val PONG = "PONG"
+        const val PING = "PING"
+        const val SOCKET_BROADCAST_ACTION = "com.example.chatexample.MINGW_IM"
+        const val MESSAGE = "message"
+        const val PUSH_STATUS = "PushStatus"
+
+        const val GRAY_SERVICE_ID = 9501
+        const val SETTING_FOR_RESULTCODE = 100
+
+        const val CID="cid"
+        const val PID="pid"
+        const val PAGE="page"
+        const val NAME="name"
+        const val ID_CARD="id_card"
+        const val ID_CARD_POSITIVE="id_card_positive"
+        const val ID_CARD_REVERSE="id_card_reverse"
+        const val PHONE="phone"
 
         const val C_1 = "1"
         const val C_2 = "2"
@@ -159,5 +168,6 @@ interface ConstantPool {
             SQL, MYSQL,
             PHP
         )
+
     }
 }

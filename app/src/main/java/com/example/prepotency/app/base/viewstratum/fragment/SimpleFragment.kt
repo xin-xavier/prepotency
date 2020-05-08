@@ -7,8 +7,9 @@ import android.os.Bundle
 import android.view.View
 import com.example.prepotency.app.AppManager
 import com.example.prepotency.app.base.viewstratum.presentation.UIPresentation
+import com.example.prepotency.login.LoginActivity
 
-abstract class SimpleFragment :LifeCycleBaseFragment,UIPresentation{
+abstract class SimpleFragment : LifeCycleBaseFragment, UIPresentation {
 
     protected var contentLayoutId = 0
     protected var activity: Activity? = null
@@ -17,8 +18,10 @@ abstract class SimpleFragment :LifeCycleBaseFragment,UIPresentation{
     // 视图是否准备好了
     protected var isPrepare = false
 
-    constructor(): super() {}
-    constructor(contentLayoutId: Int): super(contentLayoutId) {}
+    constructor() : super() {}
+    constructor(contentLayoutId: Int) : super(contentLayoutId) {
+        this.contentLayoutId = contentLayoutId
+    }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -34,8 +37,8 @@ abstract class SimpleFragment :LifeCycleBaseFragment,UIPresentation{
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        rootView=view
-        isPrepare=true
+        rootView = view
+        isPrepare = true
         init()
     }
 
@@ -46,12 +49,12 @@ abstract class SimpleFragment :LifeCycleBaseFragment,UIPresentation{
      * 界面跳转
      * @param isLogin 启动界面是否需要登录
      */
-    protected fun intent(clazz:Class<*>, isLogin:Boolean){
+    protected fun intent(clazz: Class<*>, isLogin: Boolean) {
         //需要登录&&未登录
         if (isLogin && !AppManager.isLogin()) {
-           // startActivity(Intent(context, LoginActivity::class.java))
-        }else{
-            startActivity(Intent(context,clazz))
+            startActivity(Intent(context, LoginActivity::class.java))
+        } else {
+            startActivity(Intent(context, clazz))
         }
     }
 
@@ -59,11 +62,11 @@ abstract class SimpleFragment :LifeCycleBaseFragment,UIPresentation{
      * 携带bundle跳转
      * @param isLogin 启动界面是否需要登录
      */
-    protected fun intent(bundle: Bundle, clazz:Class<*>, isLogin:Boolean){
+    protected fun intent(bundle: Bundle, clazz: Class<*>, isLogin: Boolean) {
         //需要登录&&未登录
         if (isLogin && !AppManager.isLogin()) {
-           // startActivity(Intent(context, LoginActivity::class.java))
-        }else{
+            startActivity(Intent(context, LoginActivity::class.java))
+        } else {
             startActivity(Intent(context, clazz).apply {
                 putExtras(bundle)
             })

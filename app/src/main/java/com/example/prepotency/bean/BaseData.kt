@@ -1,4 +1,4 @@
-package com.example.prepotency
+package com.example.prepotency.bean
 
 class BaseData<T> {
     var code = 0

@@ -11,6 +11,8 @@ interface ConstantUrl {
         const val BASE_URL_RELEASE = "https://api.chengmeiyouxuan.com/"
         const val BASE_URL_SERVER_DEBUG = "https://api.server.chengmeiyoupin.com/"
         const val BASE_URL_SERVER_RELEASE = "https://api.server.chengmeiyouxuan.com/"
+        const val BASE_URL_LIVE_DEBUG = "https://live.chengmeiyoupin.com/"
+        const val BASE_URL_LIVE_RELEASE = "https://live.chengmeiyouxuan.com/"
         // 连接
         const val WS_DEBUG = "ws://connector.chengmeiyoupin.com:9503"
         const val WS_RELEASE = "wss://chat.chengmeiyouxuan.com:"

@@ -12,7 +12,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-import com.example.prepotency.main.home.HomeContainerFragment
+import com.example.prepotency.main.home.container.HomeContainerFragment
 import com.example.prepotency.R
 import com.example.prepotency.app.api.ConstantPool
 import com.example.prepotency.app.base.viewstratum.fragment.BaseFragment
@@ -160,12 +160,11 @@ class HomeFragment : BaseFragment<TopContract.Presenter<TopContract.View>>() ,To
 
     private inner class BlankPagerAdapter2(
         fragmentActivity: HomeFragment,
-        list: MutableList<TopClassResult>
+        var list: MutableList<TopClassResult>
     ) : FragmentStateAdapter(fragmentActivity) {
-        var list: MutableList<TopClassResult>? = list
         override fun createFragment(position: Int): HomeContainerFragment =
-            HomeContainerFragment.newInstance(floatingActionButton, position, position)
-        override fun getItemCount(): Int = list!!.size
+            HomeContainerFragment.newInstance(floatingActionButton, list.get(position).id, position)
+        override fun getItemCount(): Int = list.size
     }
 
     override fun createPresenter(): TopContract.Presenter<TopContract.View>? {

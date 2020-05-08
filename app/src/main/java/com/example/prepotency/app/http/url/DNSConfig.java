@@ -19,42 +19,48 @@ public class DNSConfig {
     }
 
     /**
-     * 获取域名服务器 DNS(domain name server)
-     * @return
-     */
-    public boolean getDNS(){
-        return ConstantUrl.DEBUG;
-    }
-
-    /**
-     * 获取基本网址
-     * @return
+     * @method 获取域名服务器
      * boolean startsWith(String prefix)
      * 测试此字符串是否以指定的前缀开始。
      * @param url
+     * @return DNS(domain name server)
      */
-    public String getBaseUrl(String url){
-        if(getDNS()){
-            if(url.startsWith(ConstantUrl.VVV)){
-                return ConstantUrl.BASE_URL_SERVER_DEBUG;
-            } else{
-                return ConstantUrl.BASE_URL_DEBUG;
-            }
+    public String getDNS(String url){
+        if(url.startsWith(ConstantUrl.V)){
+            return getApiUrl();
+        } else if(url.startsWith(ConstantUrl.VVV)){
+            return getApiServerUrl();
         }else{
-            if(url.startsWith(ConstantUrl.VVV)){
-                return ConstantUrl.BASE_URL_SERVER_RELEASE;
-            } else{
-                return ConstantUrl.BASE_URL_RELEASE;
-            }
+            return getLiveApiUrl();
         }
     }
 
+    /**
+     * dns调试
+     * @return boolean
+     */
+    public boolean dnsDEBUG(){
+        return ConstantUrl.DEBUG;
+    }
+
+    public String getApiUrl(){
+        return dnsDEBUG() ? ConstantUrl.BASE_URL_DEBUG : ConstantUrl.BASE_URL_RELEASE;
+    }
+
+    public String getApiServerUrl(){
+        return dnsDEBUG() ? ConstantUrl.BASE_URL_SERVER_DEBUG : ConstantUrl.BASE_URL_SERVER_RELEASE;
+    }
+
+    public String getLiveApiUrl(){
+        return dnsDEBUG() ? ConstantUrl.BASE_URL_LIVE_DEBUG : ConstantUrl.BASE_URL_LIVE_RELEASE;
+    }
+
     public String getH5Url(){
-        return getDNS() ? ConstantUrl.H5_URL_DEBUG : ConstantUrl.H5_URL_RELEASE;
+        return dnsDEBUG() ? ConstantUrl.H5_URL_DEBUG : ConstantUrl.H5_URL_RELEASE;
     }
 
     public String getWs(){
-        return getDNS() ? ConstantUrl.WS_DEBUG : ConstantUrl.WS_RELEASE;
+        return dnsDEBUG() ? ConstantUrl.WS_DEBUG : ConstantUrl.WS_RELEASE;
     }
 
 }

@@ -1,7 +1,7 @@
 package com.example.prepotency.app.http.observer
 
 import android.util.Log
-import com.example.prepotency.BaseData
+import com.example.prepotency.bean.BaseData
 import com.example.prepotency.app.AppManager
 import com.example.prepotency.app.http.HttpfinishCallback
 import com.example.prepotency.app.http.helper.BusinessHttpException

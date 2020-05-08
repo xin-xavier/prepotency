@@ -1,8 +1,11 @@
 package com.example.prepotency.app.base.viewstratum.fragment
 
+import com.example.prepotency.app.base.viewstratum.presentation.UIPresentationLazyLoad
 import com.zs.wanandroid.base.IBasePresenter
 
-abstract class LazyFragment() : SimpleFragment() {
+
+abstract class BaseLazyFragment<P : IBasePresenter<*>>() : BaseFragment<P>(),
+    UIPresentationLazyLoad {
 
     protected var isFirstVisible = true
 
@@ -18,7 +21,5 @@ abstract class LazyFragment() : SimpleFragment() {
         super.onDestroy()
         isFirstVisible=true
     }
-
-    protected open fun onLazyLoad(){}
 
 }

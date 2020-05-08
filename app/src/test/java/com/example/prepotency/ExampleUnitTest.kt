@@ -15,9 +15,4 @@ class ExampleUnitTest {
     fun addition_isCorrect() {
         assertEquals(4, 2 + 2)
     }
-
-    /*@Test
-    fun start_TestActivity() {
-        GameApplacation.instance.startActivity(Intent(GameApplacation.instance,TestActivity::class.java))
-    }*/
 }

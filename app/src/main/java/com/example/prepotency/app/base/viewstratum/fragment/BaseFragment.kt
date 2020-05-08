@@ -13,9 +13,7 @@ abstract class BaseFragment<P: IBasePresenter<*>> : SimpleFragment {
     protected var presenter:P? = null
 
     constructor(): super() {}
-    constructor(contentLayoutId: Int): super(contentLayoutId) {
-        this.contentLayoutId=contentLayoutId
-    }
+    constructor(contentLayoutId: Int): super(contentLayoutId) {}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

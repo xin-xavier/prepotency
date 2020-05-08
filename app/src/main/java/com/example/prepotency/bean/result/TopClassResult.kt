@@ -6,7 +6,7 @@ class TopClassResult {
      * name : 推荐
      */
     var id = 0
-    var name: String? = null
+    var name: String = ""
     override fun toString(): String {
         return "TopClassResult(id=$id, name=$name)"
     }

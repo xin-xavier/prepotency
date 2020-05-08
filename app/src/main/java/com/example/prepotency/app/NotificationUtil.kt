@@ -33,7 +33,7 @@ object NotificationUtil {
         val appInfo = context.applicationInfo
         val pkg = context.applicationContext.packageName
         val uid = appInfo.uid
-        var appOpsClass: Class<*>? = null
+        val appOpsClass: Class<*>?
         try {
             appOpsClass = Class.forName(AppOpsManager::class.java.name)
             val checkOpNoThrowMethod = appOpsClass.getMethod(
