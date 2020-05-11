@@ -24,6 +24,12 @@ allprojects {
     }
 }
 
+ext {
+    versionCode = 1
+    versionName = "1.0.1"
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+

@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -8,7 +8,42 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="SkinCompatTextAppearance_titleSelectColor" parent="TextAppearance.AppCompat.Body1">
+    <!--禁用Preview Window 点击应用图标后会有一段时间没有响应-->
+    <style name="Splash_disablePreview" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--禁用Preview-->
+        <item name="android:windowDisablePreview">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--使用透明主题-->
+    <style name="Splash_translucent" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--设置Window透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--修改windowBackground属性-->
+    <style name="Splash_launcher" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- 通过windowBackground可以设置背景色、背景图片、能解析出图片的XML文件等-->
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--修改windowBackground属性-->
+    <style name="Splash_launcher_lollipop" parent="AppTheme">
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
+        <!--windowTranslucentNavigation这个属性设置成true，则navigationBarColor设置会失效-->
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <style name="SkinCompatTextAppearance.titleSelectColor" parent="TextAppearance.AppCompat.Body1">
         <item name="android:textColor">@color/skin_title_select</item>
     </style>
 

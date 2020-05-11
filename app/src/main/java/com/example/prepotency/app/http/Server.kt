@@ -19,19 +19,4 @@ interface Server {
     @POST("v3/home/classGoods")
     fun classGoods(@FieldMap map: MutableMap<String, Int?>): Observable<BaseData<HotResult>>
 
-    /////////////////////////////////////////////////////////////////////////////////
-    //
-    //  直播接口
-    //
-    /////////////////////////////////////////////////////////////////////////////////
-    /**
-     * @param map FieldMap
-     * @return BaseData
-     * @method 提交认证
-     * @url https://live.chengmeiyoupin.com/api/anchor/artificial_attest
-     */
-    @POST("api/anchor/artificial_attest")
-    @FormUrlEncoded
-    fun artificial_attest(@FieldMap map: Map<String, String>): Observable<BaseData<Any>>
-
 }

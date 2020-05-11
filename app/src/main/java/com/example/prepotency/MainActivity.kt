@@ -10,6 +10,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
+import com.blankj.utilcode.util.LogUtils
+import com.blankj.utilcode.util.SPStaticUtils
+import com.example.decorview.utils.Utils
 import com.example.prepotency.app.api.ConstantPool
 import com.example.prepotency.app.base.viewstratum.activity.SimpleDecorViewActivity
 import com.example.prepotency.bean.entity.TabEntity
@@ -36,6 +39,13 @@ class MainActivity : SimpleDecorViewActivity() {
     }
 
     override fun init() {
+        Utils.instance?.showUserAgreementDialog(context,supportFragmentManager)
+
+        val all = SPStaticUtils.getAll()
+        for (entry in all.entries) {
+            LogUtils.e("SPStaticUtils: "+entry.key+" --- "+entry.value)
+        }
+
         initData()
 
         settingUpTheNavigator()

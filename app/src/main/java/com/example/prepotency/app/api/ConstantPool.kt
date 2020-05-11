@@ -87,6 +87,10 @@ interface ConstantPool {
         const val _24 = 24
         const val _40 = 40
 
+        const val DUP_WIDTH = 300
+        const val DUP_HEIGHT = 285
+        const val TD_DIM_AMOUNT = 0.6
+
         const val NOTIFICATION_SAMPLE = 0
         const val NOTIFICATION_ACTION = 1
         const val NOTIFICATION_REMOTE_INPUT = 2

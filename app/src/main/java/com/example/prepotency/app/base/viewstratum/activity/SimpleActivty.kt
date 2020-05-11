@@ -61,6 +61,14 @@ abstract class SimpleActivty : LifeLinksBaseActivity() ,
      * 界面跳转
      * @param isLogin 启动界面是否需要登录
      */
+    protected fun intent(clazz:Class<*>){
+        startActivity(Intent(this,clazz))
+    }
+
+    /**
+     * 界面跳转
+     * @param isLogin 启动界面是否需要登录
+     */
     protected fun intent(clazz:Class<*>,isLogin:Boolean){
         //需要登录&&未登录
         if (isLogin && !AppManager.isLogin()) {
@@ -69,6 +77,7 @@ abstract class SimpleActivty : LifeLinksBaseActivity() ,
             startActivity(Intent(this,clazz))
         }
     }
+
     /**
      * 携带bundle跳转
      * @param isLogin 启动界面是否需要登录

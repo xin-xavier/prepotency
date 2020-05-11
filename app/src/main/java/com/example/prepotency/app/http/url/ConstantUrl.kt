@@ -13,6 +13,7 @@ interface ConstantUrl {
         const val BASE_URL_SERVER_RELEASE = "https://api.server.chengmeiyouxuan.com/"
         const val BASE_URL_LIVE_DEBUG = "https://live.chengmeiyoupin.com/"
         const val BASE_URL_LIVE_RELEASE = "https://live.chengmeiyouxuan.com/"
+
         // 连接
         const val WS_DEBUG = "ws://connector.chengmeiyoupin.com:9503"
         const val WS_RELEASE = "wss://chat.chengmeiyouxuan.com:"
@@ -21,5 +22,10 @@ interface ConstantUrl {
         const val QiNiuYun_DNS = "https://upload.chengmeiyouxuan.com/"
         // 测试 WS
         const val TEST_WS = "ws://echo.websocket.org"
+
+        // 隐私政策
+        var variousPrivacy = "v3/various/privacy"
+        // 许可协议
+        var variousProtocol = "v3/various/protocol"
     }
 }
