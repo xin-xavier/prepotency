@@ -3,6 +3,7 @@ package com.example.prepotency.app.http
 import com.example.prepotency.bean.BaseData
 import com.example.prepotency.bean.result.HotResult
 import com.example.prepotency.bean.result.TopClassResult
+import com.example.prepotency.bean.result.VersionUpdatingResult
 import io.reactivex.Observable
 import retrofit2.http.FieldMap
 import retrofit2.http.FormUrlEncoded
@@ -18,5 +19,10 @@ interface Server {
     @FormUrlEncoded
     @POST("v3/home/classGoods")
     fun classGoods(@FieldMap map: MutableMap<String, Int?>): Observable<BaseData<HotResult>>
+
+    // 版本更新
+    @POST("v3/home/release")
+    @FormUrlEncoded
+    fun versionUpdating(@FieldMap stringObjectMap: Map<String, String>): Observable<BaseData<VersionUpdatingResult>>
 
 }

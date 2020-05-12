@@ -17,4 +17,6 @@
     <string name="tryItNow">立即体验</string>
     <string name="disagree">不同意</string>
     <string name="agree">同意</string>
+    <string name="newVersionFound">发现新版本</string>
+    <string name="upgradeImmediately">立即升级</string>
 </resources>

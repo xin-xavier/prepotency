@@ -65,6 +65,13 @@ dependencies {
     implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.5.3'
 
     /**
+     *   BasePopup
+     *   github
+     *    https://github.com/razerdp/BasePopup
+     */
+    implementation 'com.github.razerdp:BasePopup:2.2.3'
+
+    /**
      *  TDialog 弹窗
      *  github
      *   https://github.com/Timmy-zzh/TDialog

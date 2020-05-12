@@ -7,6 +7,7 @@ import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import com.blankj.utilcode.util.ConvertUtils
+import com.blankj.utilcode.util.LogUtils
 import com.blankj.utilcode.util.SPStaticUtils
 import com.example.prepotency.app.api.ConstantPool.Companion.DUP_HEIGHT
 import com.example.prepotency.app.api.ConstantPool.Companion.DUP_WIDTH
