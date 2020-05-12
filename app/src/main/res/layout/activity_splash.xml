@@ -7,5 +7,5 @@
     android:layout_height="match_parent"
     android:scaleType="centerCrop"
     android:src="@drawable/splash"
-    tools:context=".SplashActivity"
+    tools:context=".app.splash.SplashActivity"
     android:contentDescription="@string/imageView" />

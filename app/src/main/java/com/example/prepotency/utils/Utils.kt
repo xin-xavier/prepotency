@@ -233,7 +233,7 @@ object Utils {
                 .setGravity(Gravity.CENTER)
                 .setWidth(px_width)
                 .setHeight(px_height)
-                .setDimAmount(ConstantPool.TD_DIM_AMOUNT.toFloat())
+                .setDimAmount(ConstantPool.TD_DIM_AMOUNT)
                 .setCancelableOutside(true)
                 .setOnDismissListener { }
                 .addOnClickListener(R.id.disagree, R.id.agree)

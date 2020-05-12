@@ -22,6 +22,11 @@ interface ConstantUrl {
         const val QiNiuYun_DNS = "https://upload.chengmeiyouxuan.com/"
         // 测试 WS
         const val TEST_WS = "ws://echo.websocket.org"
+        // 一个 test 视频
+        const val TEST_VIDEO_PATH = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+        // 一张 test 图片
+        const val TEST_IMAGE_PATH =
+            "http://b-ssl.duitang.com/uploads/item/201710/01/20171001004645_WSZye.thumb.700_0.jpeg"
 
         // 隐私政策
         var variousPrivacy = "v3/various/privacy"

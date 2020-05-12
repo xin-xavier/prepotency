@@ -18,12 +18,12 @@ abstract class LifeCycleBaseFragment : Fragment, UIPresentation {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        Log.w(TAG, "onAttach: ")
+        Log.i(TAG, "onAttach: ")
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.w(TAG, "onCreate: ")
+        Log.i(TAG, "onCreate: ")
     }
 
     override fun onCreateView(
@@ -31,52 +31,52 @@ abstract class LifeCycleBaseFragment : Fragment, UIPresentation {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.w(TAG, "onCreateView: ")
+        Log.i(TAG, "onCreateView: ")
         return super.onCreateView(inflater, container, savedInstanceState)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        Log.w(TAG, "onActivityCreated: ")
+        Log.i(TAG, "onActivityCreated: ")
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.w(TAG, "onViewCreated: ")
+        Log.i(TAG, "onViewCreated: ")
     }
 
     override fun onStart() {
         super.onStart()
-        Log.w(TAG, "onStart: ")
+        Log.i(TAG, "onStart: ")
     }
 
     override fun onResume() {
         super.onResume()
-        Log.w(TAG, "onResume: ")
+        Log.i(TAG, "onResume: ")
     }
 
     override fun onPause() {
         super.onPause()
-        Log.w(TAG, "onPause: ")
+        Log.i(TAG, "onPause: ")
     }
 
     override fun onStop() {
         super.onStop()
-        Log.w(TAG, "onStop: ")
+        Log.i(TAG, "onStop: ")
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        Log.w(TAG, "onDestroyView: ")
+        Log.i(TAG, "onDestroyView: ")
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.w(TAG, "onDestroy: ")
+        Log.i(TAG, "onDestroy: ")
     }
 
     override fun onDetach() {
-        Log.w(TAG, "onDetach: ")
+        Log.i(TAG, "onDetach: ")
         super.onDetach()
     }
 

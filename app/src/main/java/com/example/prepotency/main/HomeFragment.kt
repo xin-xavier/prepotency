@@ -150,12 +150,11 @@ class HomeFragment : BaseFragment<TopContract.Presenter<TopContract.View>>() ,To
                 magicIndicator.onPageSelected(position)
             }
         })
-        viewPager.offscreenPageLimit = 6
+        //viewPager.offscreenPageLimit = 6
     }
 
     override fun onError(error: String) {
         Log.e(TAG, "onError: $error");
-        //GsonUtils.fromJson<BaseData<MutableList<TopClassResult>>>()
     }
 
     private inner class BlankPagerAdapter2(

@@ -1,4 +1,4 @@
-package com.example.prepotency;
+package com.example.prepotency.test;
 
 import java.util.List;
 

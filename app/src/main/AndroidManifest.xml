@@ -36,12 +36,14 @@
         <activity android:name=".login.LoginActivity" />
         <activity
             android:name=".MainActivity"
-            android:launchMode="singleTask" />
-        <activity android:name=".GuideActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".app.splash.GuideActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".app.splash.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Splash_translucent"
             tools:ignore="LockedOrientationActivity">

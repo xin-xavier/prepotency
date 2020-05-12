@@ -1,4 +1,4 @@
-package com.example.prepotency;
+package com.example.prepotency.utils;
 
 import android.content.Context;
 import android.widget.ImageView;

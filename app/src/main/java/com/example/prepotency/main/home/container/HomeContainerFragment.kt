@@ -5,33 +5,32 @@ import com.example.prepotency.app.api.ConstantPool.Companion.ARG_PARAM_CLASS
 import com.example.prepotency.app.api.ConstantPool.Companion.ARG_PARAM_ID
 import com.example.prepotency.app.api.ConstantPool.Companion.ARG_PARAM_VIEW
 import com.example.prepotency.app.base.viewstratum.fragment.BaseLazyFragment
-import com.example.prepotency.futile.KotlinBlankFragment
+import com.example.prepotency.test.futile.KotlinBlankFragment
 import com.example.prepotency.widght.PassableFloatingActionButton
 
-abstract class HomeContainerFragment : BaseLazyFragment<ClassContract.Presenter<ClassContract.View>>() , ClassContract.View {
+abstract class HomeContainerFragment : BaseLazyFragment<HomeContract.Presenter<HomeContract.View>>() , HomeContract.View {
 
     private var floatingActionButton: PassableFloatingActionButton? = null
-    var pageItem: Int? = null
+    var pageId: Int? = null
     private var pageClass: Int? = null
+
+    private var page : Int=1;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             floatingActionButton =
                 it.getSerializable(ARG_PARAM_VIEW) as PassableFloatingActionButton?
-            pageItem = it.getInt(ARG_PARAM_ID)
+            pageId = it.getInt(ARG_PARAM_ID)
             pageClass = it.getInt(ARG_PARAM_CLASS)
         }
     }
 
     override fun init() {
-        //创建可变集合
-        val map= mutableMapOf(
-            "cid" to 0,
-            "pid" to pageClass,
-            "page" to pageClass
-        )
-        presenter.let { presenter?.classGoods(map) }
+        presenter.let {
+            presenter?.hot(page)
+            pageId?.let { it1 -> presenter?.slideShow(it1) }
+        }
     }
 
     companion object {
