@@ -15,11 +15,11 @@
             android:layout_width="match_parent"
             android:layout_height="54dp"
             android:layout_alignParentBottom="true"
-            android:background="@color/app_color_white"
+            android:background="@color/white"
             tl:tl_iconHeight="24dp"
             tl:tl_iconWidth="24dp"
             tl:tl_textSelectColor="@color/init_font"
-            tl:tl_textUnselectColor="@color/black_ff666666"
+            tl:tl_textUnselectColor="@color/b_666666"
             tl:tl_textsize="11sp" />
 
     <androidx.viewpager2.widget.ViewPager2
@@ -42,7 +42,7 @@
             app:borderWidth="0dp"
             app:elevation="0dp"
             app:fabSize="mini"
-            app:rippleColor="@color/orange_FFD0A147"
+            app:rippleColor="@color/main_orange"
             tools:targetApi="lollipop"
             tools:ignore="UnusedAttribute" />
 

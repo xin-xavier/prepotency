@@ -31,8 +31,8 @@ class BannerImageAdapter(slideList: List<SlideShowResult>) :
             ViewGroup.LayoutParams.MATCH_PARENT
         )
         layoutParams.setMargins(
-            SizeUtils.dp2px(ConstantPool._4.toFloat()), 0, SizeUtils.dp2px(
-                ConstantPool._4.toFloat()
+            SizeUtils.dp2px(4.toFloat()), 0, SizeUtils.dp2px(
+                4.toFloat()
             ), 0
         )
         imageView.layoutParams = layoutParams

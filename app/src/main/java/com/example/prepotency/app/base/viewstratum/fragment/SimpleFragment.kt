@@ -25,6 +25,7 @@ abstract class SimpleFragment : LifeCycleBaseFragment, UIPresentation {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
+        //this.context=context
         activity = getActivity()
     }
 

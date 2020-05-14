@@ -65,7 +65,7 @@ abstract class SimpleDecorViewActivity : SimpleActivty(), OnPrepareListener {
         // xincaution 当没有设置具体宽高的获取到的值为0
         //val width = toolbarLayoutContent.layoutParams.width
         //Log.i(TAG, "onCreate: height = " + height + " == " + SizeUtils.dp2px(ConstantPool._40.toFloat()))
-        val appbarHeight: Int = statusBarHeight + SizeUtils.dp2px(ConstantPool._0.toFloat()) + height
+        val appbarHeight: Int = statusBarHeight + SizeUtils.dp2px(0.toFloat()) + height
         appbarLayout.getLayoutParams().height = appbarHeight
 
         setToolbarResID(layoutToolbarResID())

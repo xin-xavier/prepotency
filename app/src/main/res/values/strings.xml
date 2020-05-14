@@ -19,4 +19,6 @@
     <string name="agree">同意</string>
     <string name="newVersionFound">发现新版本</string>
     <string name="upgradeImmediately">立即升级</string>
+    <string name="yang">￥</string>
+    <string name="_1000f">1000.00</string>
 </resources>

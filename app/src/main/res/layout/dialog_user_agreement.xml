@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_above="@+id/relativeLayout"
-            android:background="@color/white_FFF8F8F8" />
+            android:background="@color/w_f8f8f8" />
 
         <RelativeLayout
             android:id="@+id/relativeLayout"
@@ -31,7 +31,7 @@
                 android:layout_width="1dp"
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
-                android:background="@color/white_FFF8F8F8" />
+                android:background="@color/w_f8f8f8" />
 
             <TextView
                 android:id="@+id/disagree"
@@ -40,7 +40,7 @@
                 android:layout_toStartOf="@+id/cutOff"
                 android:gravity="center"
                 android:text="@string/disagree"
-                android:textColor="@color/black_ff333333"
+                android:textColor="@color/init_font"
                 android:textSize="17sp" />
 
             <TextView
@@ -50,7 +50,6 @@
                 android:layout_toEndOf="@+id/cutOff"
                 android:gravity="center"
                 android:text="@string/agree"
-                android:textColor="@color/black_ff333333"
                 android:textSize="17sp" />
 
         </RelativeLayout>

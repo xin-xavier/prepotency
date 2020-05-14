@@ -12,7 +12,6 @@ interface ConstantPool {
         const val DEF_TYPE = "dimen"
         const val ANDROID = "android"
 
-
         const val ARG_PARAM_VIEW = "floatingActionButton"
         const val ARG_PARAM_ID = "pageItem"
         const val ARG_PARAM_CLASS = "pageClass"
@@ -59,38 +58,20 @@ interface ConstantPool {
         const val C_2 = "2"
         const val C_3 = "3"
 
-        const val M_1 = -1
-        const val _0 = 0
-        const val _1 = 1
-        const val _2 = 2
-        const val _3 = 3
-        const val _4 = 4
-        const val _5 = 5
-        const val _6 = 6
-        const val _7 = 7
-        const val _8 = 8
-        const val _9 = 9
-        const val _10 = 10
-        const val _11 = 11
-        const val _12 = 12
-        const val _13 = 13
-        const val _14 = 14
-        const val _15 = 15
-        const val _16 = 16
-        const val _17 = 17
-        const val _18 = 18
-        const val _19 = 19
-        const val _20 = 20
-        const val _21 = 21
-        const val _22 = 22
-        const val _23 = 23
-        const val _24 = 24
-        const val _40 = 40
-
         const val DUP_WIDTH = 300
         const val DUP_HEIGHT = 285
         const val TD_DIM_AMOUNT = 0.6f
         const val SIZE_MULTIPLIER = 0.6f
+        const val DEFAULT_RADIUS=4
+
+        const val NULLCHARACTER = ""
+        const val SPACE = " "
+        const val YANG = "￥"
+        const val UNDERLINE = "_"
+        const val X = "x"
+        const val COMMA = ","
+
+        const val peoplePay = "人付款"
 
         const val NOTIFICATION_SAMPLE = 0
         const val NOTIFICATION_ACTION = 1

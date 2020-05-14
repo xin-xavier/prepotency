@@ -24,7 +24,7 @@ class TobPresenter(view: TopContract.View): BasePresenter<TopContract.View>(view
                 }
 
                 override fun onError(errorMsg: String) {
-                    view?.onError(errorMsg)
+                    view?.showError(errorMsg)
                 }
             })
     }

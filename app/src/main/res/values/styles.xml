@@ -6,6 +6,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="backgroundColor">@color/initial</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/init_font</item>
     </style>
 
     <!--禁用Preview Window 点击应用图标后会有一段时间没有响应-->
@@ -34,8 +37,11 @@
 
     <!--修改windowBackground属性-->
     <style name="Splash_launcher_lollipop" parent="AppTheme">
-        <item name="android:navigationBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
-        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">
+            @android:color/transparent
+        </item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent
+        </item>
         <!--windowTranslucentNavigation这个属性设置成true，则navigationBarColor设置会失效-->
         <!--<item name="android:windowTranslucentNavigation">true</item>-->
         <!--<item name="android:windowTranslucentStatus">true</item>-->

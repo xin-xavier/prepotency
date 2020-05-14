@@ -64,8 +64,8 @@ class MainActivity : SimpleDecorViewActivity() {
 
     override fun layoutToolbarResID(): Int {
         when (pageItem) {
-            ConstantPool._0 -> {
-                appbarBg.setImageResource(R.color.initial_FFF5F6F8)
+            0 -> {
+                appbarBg.setImageResource(R.color.initial)
                 return R.layout.layout_searchbox_btn
             }
             else -> {
@@ -159,5 +159,7 @@ class MainActivity : SimpleDecorViewActivity() {
             }
 
     }
+
+
 
 }

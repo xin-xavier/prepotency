@@ -29,11 +29,11 @@ class HotResult : Parcelable {
          */
         var id = 0
         var shop_id = 0
-        var image: String? = null
+        var image: String = ""
         var images: String? = null
-        var name: String? = null
+        var name: String = ""
         var num = 0
-        var price: String? = null
+        var price: String = ""
         var sales = 0
         var type = 0
         var shipping_method = 0
@@ -73,9 +73,9 @@ class HotResult : Parcelable {
             id = `in`.readInt()
             shop_id = `in`.readInt()
             images = `in`.readString()
-            name = `in`.readString()
+            name = `in`.readString().toString()
             num = `in`.readInt()
-            price = `in`.readString()
+            price = `in`.readString().toString()
             sales = `in`.readInt()
             type = `in`.readInt()
             shipping_method = `in`.readInt()

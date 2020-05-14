@@ -1,110 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--app-->
     <color name="colorPrimary">#00ffffff</color>
     <color name="colorPrimaryDark">#00ffffff</color>
     <color name="colorAccent">#FF333333</color>
 
+    <!--常用-->
     <color name="transparent">#00ffffff</color>
     <color name="white">#FFFFFFFF</color>
     <color name="initial">#FFF5F6F8</color>
     <color name="init_font">#FF333333</color>
+    <color name="main_orange">#FFD0A147</color>
+
+    <!--用色码作名字-->
+    <!--b=黑色-->
+    <color name="b_14100E">#FF14100E</color>
+    <color name="b_333333">#ff333333</color>
+    <color name="b_666666">#ff666666</color>
+    <!--w=白色-->
+    <color name="w_f8f8f8">#fff8f8f8</color>
 
     <!--skin-->
     <color name="skin_title_select">#FFD0A147</color>
     <color name="skin_title_unselect">#FF666666</color>
     <color name="skin_indicator">#FFD0A147</color>
 
-    <color name="colorTransparent_15">#D9ffffff</color>
-
-    <color name="rad_fff42c2e">#fff42c2e</color>
-
-    <color name="black_FF000000">#FF000000</color>
-    <color name="black_FF14100E">#FF14100E</color>
-    <color name="black_FF252525">#FF252525</color>
-
-    <color name="black_ff464646">#ff464646</color>
-    <color name="black_ff333333">#ff333333</color>
-    <color name="black_ff666666">#ff666666</color>
-
-    <color name="gray_FF707070">#FF707070</color>
-    <color name="gray_FF999999">#FF999999</color>
-    <color name="gray_FF9B9B9B">#FF9B9B9B</color>
-    <color name="gray_FFC4C4C4">#FFC4C4C4</color>
-    <color name="gray_FFCCCCCC">#FFCCCCCC</color>
-    <color name="gray_FFE0E0E0">#FFE0E0E0</color>
-    <color name="gray_FFF7F8FA">#FFF7F8FA</color>
-    <color name="gray_fff5f5f5">#fff5f5f5</color>
-    <color name="initial_FFF5F6F8">#FFF5F6F8</color>
-
-    <color name="white_FFEEEEEE">#FFEEEEEE</color>
-    <color name="white_FFF8F8F8">#FFF8F8F8</color>
-    <color name="white_FFFEFEFE">#FFFEFEFE</color>
-    <color name="white_99FEFEFE">#99FEFEFE</color>
-
-    <color name="transparent_66_F">#F5FFFFFF</color>
-    <color name="transparent_6_F">#ff000000</color>
-
-    <color name="blue_ff6b6cff">#ff6b6cff</color>
-
-    <color name="blue_FF96CEFD">#FF96CEFD</color>
-    <color name="blue_FF0099FF">#FF0099FF</color>
-    <color name="blue_FF026ACD">#FF026ACD</color>
-    <color name="blue_99026ACD">#99026ACD</color>
-
-    <color name="pink_FFFFECFF">#FFFFECFF</color>
-    <color name="purple_FFBC2FBC">#FFBC2FBC</color>
-    <color name="purple_99BC2FBC">#99BC2FBC</color>
-
-    <color name="orange_FFFFE7E0">#FFFFE7E0</color>
-    <color name="orange_FFFE813F">#FFFE813F</color>
-    <color name="orange_99FE813F">#99FE813F</color>
-
-    <color name="cyan_FFDEFFF1">#FFDEFFF1</color>
-    <color name="cyan_FF25B89E">#FF25B89E</color>
-    <color name="cyan_9925B89E">#9925B89E</color>
-
-    <color name="yearmouse_ED4E39">#ED4E39</color>
-    <color name="yearmouse_FFEFDA">#FFEFDA</color>
-    <color name="yearmouse_FBCFBA">#FBCFBA</color>
-    <!--    <color name="yearmouse_FBCFBA">#ED4E39</color>-->
-
-    <color name="brown_FF996600">#FF996600</color>
-    <color name="brown_99996600">#99996600</color>
-    <color name="orange_FFD0A147">#FFD0A147</color>
-    <color name="orange_FFE7D0A3">#FFE7D0A3</color>
-    <color name="yellow_FFFFFBD9">#FFFFFBD9</color>
-    <color name="rad_FFFC3344">#FFFC3344</color>
-    <color name="rad_ffff0000">#ffff0000</color>
-
-
-    <!--skin-->
-    <color name="home_botton_text">#FF666666</color>
-    <color name="home_botton_text_sel">#FF333333</color>
-
-    <color name="home_top_text">#FF666666</color>
-    <color name="home_top_text_sel">#FFD0A147</color>
-
-    <color name="app_color_grey">#393a3e</color>
-    <color name="app_color_black">#000000</color>
-    <color name="app_color_f6">#f6f6f6</color>
-    <color name="app_color_fa">#fafafa</color>
-    <color name="app_color_divider">#B6B6B6</color>
-    <color name="app_color_c51">#f94c51</color>
-    <color name="app_color_green">#43c117</color>
-    <color name="app_color_53575e">#53575e</color>
-    <color name="app_color_transparent">#00000000</color>
-    <color name="app_color_white">#FFFFFF</color>
-    <color name="app_color_blue">#7D7DFF</color>
-    <color name="app_color_9b">#9b9b9b</color>
-    <color name="app_color_e0ff6100">#E0FF6100</color>
-
-    <color name="grayLight">#999999</color>
-    <color name="grayDark">#333333</color>
-
-    <color name="normal">#EEEEEE</color>
-    <color name="select">#FF5C5C</color>
-    <color name="empty">#FAF9F9</color>
-
+    <!--补充-->
     <color name="ivory">#fffff0</color> <!-- 象牙色 -->
     <color name="lightyellow">#ffffe0</color> <!-- 亮黄色 -->
     <color name="yellow">#ffff00</color> <!-- 黄色 -->

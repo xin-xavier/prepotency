@@ -153,7 +153,7 @@ class HomeFragment : BaseFragment<TopContract.Presenter<TopContract.View>>() ,To
         //viewPager.offscreenPageLimit = 6
     }
 
-    override fun onError(error: String) {
+    override fun showError(error: String) {
         Log.e(TAG, "onError: $error");
     }
 

@@ -14,7 +14,7 @@ class HomeAdResult {
     var position = 0
     var gid = 0
     var url: String? = null
-    var image: String? = null
+    var image: String = ""
     var mid = 0
     var shipping_method = 0
 

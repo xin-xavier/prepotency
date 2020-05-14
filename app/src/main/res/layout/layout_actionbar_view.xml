@@ -11,7 +11,7 @@
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:contentDescription="@string/imageView"
-            android:src="@color/app_color_white"/>
+            android:src="@color/white"/>
 
     <FrameLayout
             android:id="@id/toolbarLayoutContent"

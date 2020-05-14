@@ -8,13 +8,14 @@ import com.example.prepotency.app.base.viewstratum.fragment.BaseLazyFragment
 import com.example.prepotency.test.futile.KotlinBlankFragment
 import com.example.prepotency.widght.PassableFloatingActionButton
 
-abstract class HomeContainerFragment : BaseLazyFragment<HomeContract.Presenter<HomeContract.View>>() , HomeContract.View {
+abstract class HomeContainerFragment :
+    BaseLazyFragment<HomeContract.Presenter<HomeContract.View>>(), HomeContract.View {
 
     private var floatingActionButton: PassableFloatingActionButton? = null
-    var pageId: Int? = null
-    private var pageClass: Int? = null
+    private var pageId: Int = 0
+    private var pageClass: Int = 0
 
-    private var page : Int=1;
+    private var page: Int = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,8 +29,14 @@ abstract class HomeContainerFragment : BaseLazyFragment<HomeContract.Presenter<H
 
     override fun init() {
         presenter.let {
+            presenter?.slideShow(pageId)
+            if(pageClass==0){
+                presenter?.homeAd()
+                presenter?.choiceShop()
+            }else{
+                presenter?.subClass(pageId)
+            }
             presenter?.hot(page)
-            pageId?.let { it1 -> presenter?.slideShow(it1) }
         }
     }
 
