@@ -13,7 +13,7 @@ abstract class HomeContainerFragment :
 
     private var floatingActionButton: PassableFloatingActionButton? = null
     private var pageId: Int = 0
-    private var pageClass: Int = 0
+    protected var pageClass: Int = 0
 
     private var page: Int = 1
 

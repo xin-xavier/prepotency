@@ -7,6 +7,7 @@ import com.example.prepotency.R
 import com.example.prepotency.app.api.ConstantTransmit.Companion.SPLASH
 import com.example.prepotency.app.base.viewstratum.activity.SimpleActivty
 import com.example.prepotency.test.AutoActivity
+import com.example.prepotency.test.JavaActivity
 import kotlinx.android.synthetic.main.activity_splash.*
 
 
@@ -24,6 +25,7 @@ class SplashActivity : SimpleActivty() {
                 if (SPStaticUtils.getBoolean(SPLASH)) {
                     intent(MainActivity::class.java)
                     //intent(AutoActivity::class.java)
+                    //intent(JavaActivity::class.java)
                 } else {
                     SPStaticUtils.put(SPLASH, true)
                     intent(GuideActivity::class.java)

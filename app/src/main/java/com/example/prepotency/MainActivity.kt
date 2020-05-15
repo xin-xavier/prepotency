@@ -46,7 +46,7 @@ class MainActivity : SimpleDecorViewActivity() {
         settingUpTheNavigator()
 
         // 检查版本更新
-        //Utils.instance?.versionUpdating(this)
+        Utils.instance?.versionUpdating(this)
     }
 
     override fun onPrepare() {

@@ -1,27 +1,25 @@
 package com.example.prepotency.test;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.location.Address;
-import android.location.Geocoder;
-import android.location.Location;
-import android.location.LocationManager;
+import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.widget.ProgressBar;
 
 import com.example.prepotency.R;
+import com.example.prepotency.app.base.viewstratum.activity.SimpleActivty;
 
-import java.io.IOException;
-import java.util.List;
-import java.util.Locale;
-
-public class JavaActivity extends AppCompatActivity {
+public class JavaActivity extends SimpleActivty {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_java);
+
+    }
+
+    @Override
+    public void init() {
+        //ProgressDialog.show(context, null, "正在连接服务器...", true, true);
+
     }
 
 }

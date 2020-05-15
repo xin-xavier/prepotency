@@ -12,14 +12,20 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
+import com.blankj.utilcode.util.GsonUtils
+import com.blankj.utilcode.util.ResourceUtils
+import com.blankj.utilcode.util.SPStaticUtils
+import com.blankj.utilcode.util.StringUtils
 import com.example.prepotency.main.home.container.HomeContainerFragment
 import com.example.prepotency.R
 import com.example.prepotency.app.api.ConstantPool
+import com.example.prepotency.app.api.ConstantTransmit.Companion.TOP_CLASS
 import com.example.prepotency.app.base.viewstratum.fragment.BaseFragment
 import com.example.prepotency.bean.result.TopClassResult
 import com.example.prepotency.main.home.TopContract
 import com.example.prepotency.main.home.TobPresenter
 import com.example.prepotency.widght.PassableFloatingActionButton
+import io.reactivex.Observable
 import kotlinx.android.synthetic.main.fragment_home.*
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.CommonNavigator
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.CommonNavigatorAdapter
@@ -53,6 +59,8 @@ class HomeFragment : BaseFragment<TopContract.Presenter<TopContract.View>>() ,To
     }
 
     private fun showTopClass(list: MutableList<TopClassResult>) {
+        // 缓存
+        SPStaticUtils.put(TOP_CLASS,GsonUtils.toJson(list))
         val pagerAdapter: BlankPagerAdapter2 = BlankPagerAdapter2(this,list)
         viewPager.adapter = pagerAdapter
         val commonNavigator = CommonNavigator(context)
@@ -155,6 +163,12 @@ class HomeFragment : BaseFragment<TopContract.Presenter<TopContract.View>>() ,To
 
     override fun showError(error: String) {
         Log.e(TAG, "onError: $error");
+        val topClassJson = SPStaticUtils.getString(TOP_CLASS)
+        if(StringUtils.isEmpty(topClassJson)){
+
+        }else{
+
+        }
     }
 
     private inner class BlankPagerAdapter2(

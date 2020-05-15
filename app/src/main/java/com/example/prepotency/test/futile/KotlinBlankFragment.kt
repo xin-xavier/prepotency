@@ -48,11 +48,39 @@ class KotlinBlankFragment : HomeContainerFragment() {
             SizeUtils.sp2px(12.toFloat())
         recyclerView.addItemDecoration(RecyclerViewSpacesItemDecoration(stringIntegerHashMap))
         recyclerView.adapter = adapter
+        // 移除全部头部
+        adapter.removeAllHeaderView()
+        if(pageClass==0){
+            adapter.setHeaderView(getEmptyHeaderView())
+            adapter.setHeaderView(getEmptyHeaderView())
+            //adapter.setHeaderView(getEmptyHeaderView())
+        }else{
+            adapter.setHeaderView(getEmptyHeaderView())
+            //adapter.setHeaderView(getEmptyHeaderView())
+        }
         super.init()
     }
 
     override fun onLazyLoad() {
         recyclerView.scrollToPosition(0)
+    }
+
+    private fun getEmptyHeaderView(): View {
+        return View(context)
+    }
+
+    override fun showSlideShow(slideList: List<SlideShowResult>) {
+        adapter.setHeaderView(getBannerHeaderView(slideList), 1)
+    }
+
+    override fun showSubClass(subclassList: List<SubClassResult>) {
+    }
+
+    override fun showAd(adList: List<HomeAdResult>) {
+        adapter.setHeaderView(getAdHeaderView(adList), 2)
+    }
+
+    override fun showChoiceShop(choiceLists: List<List<ChoiceShopResult>>) {
     }
 
     override fun showHot(hotResult: HotResult) {
@@ -66,21 +94,7 @@ class KotlinBlankFragment : HomeContainerFragment() {
         ToastUtils.showShort(error)
     }
 
-    override fun showSlideShow(slideList: List<SlideShowResult>) {
-        adapter.setHeaderView(getHeaderView(slideList), 1)
-    }
-
-    override fun showAd(adList: List<HomeAdResult>) {
-        adapter.setHeaderView(getAdHeaderView(adList), 2)
-    }
-
-    override fun showSubClass(subclassList: List<SubClassResult>) {
-    }
-
-    override fun showChoiceShop(choiceLists: List<List<ChoiceShopResult>>) {
-    }
-
-    private fun getHeaderView(slideList: List<SlideShowResult>): View {
+    private fun getBannerHeaderView(slideList: List<SlideShowResult>): View {
         val view = View.inflate(context, R.layout.banner, null)
         val imageAdapter = BannerImageAdapter(slideList);
         val banner =
